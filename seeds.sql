@@ -39,34 +39,34 @@ SELECT * FROM position
 
 --employee seeds-
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Pam", "Beesly", 4)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (1, "Pam", "Beesly", 4);
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Dwight", "Schrute", 3)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (2,"Dwight", "Schrute", 3);
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Jim", "Halpert", 3)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (3, "Jim", "Halpert", 3);
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Michael", "Scott", 5)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (4, "Michael", "Scott", 5);
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Creed", "Bratton", 3)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (5, "Creed", "Bratton", 3);
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Andy", "Bernard", 3)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (6, "Andy", "Bernard", 3);
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Kevin", "Malone", 1)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (7, "Kevin", "Malone", 1);
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Toby", "Flenderson", 2)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (8, "Toby", "Flenderson", 2);
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Oscar", "Martinez", 1)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (9, "Oscar", "Martinez", 1);
 
-INSERT INTO employee (first_name, last_name, position_id)
-VALUES ("Phyllis", "Vance", 3)
+INSERT INTO employee (id, first_name, last_name, position_id)
+VALUES (10, "Phyllis", "Vance", 3);
 
 SELECT * FROM employee
