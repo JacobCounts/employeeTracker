@@ -5,6 +5,8 @@ const connection = require("./connection");
 // Start the application
 init();
 
+
+// Asks user questions and options to choose from 
 async function init() {
   const { action } = await inquirer.prompt({
     type: "list",
@@ -50,28 +52,28 @@ async function init() {
       break;
   }
 }
-
+// shows all employees in table form
 async function viewEmployees() {
   const query = "SELECT * FROM employee";
   const data = await connection.query(query);
   console.table(data);
   init();
 }
-
+// shows all departments in table form
 async function viewAllDept() {
   const query = "SELECT * FROM department";
   const data = await connection.query(query);
   console.table(data);
   init();
 }
-
+// shows all positions in table form 
 async function viewAllPositions() {
   const query = "SELECT * FROM position";
   const data = await connection.query(query);
   console.table(data);
   init();
 }
-
+// allows user to add employee 
 function addEmp() {
   inquirer
     .prompt([
@@ -115,7 +117,7 @@ function addEmp() {
       init();
     });
 }
-
+// allows user to add department 
 function addDepartment() {
   inquirer
     .prompt([
@@ -139,5 +141,51 @@ function addDepartment() {
       init();
     });
 }
-
-
+// allows user to remove emoloyee 
+function removeEmp() {
+  inquirer.prompt ([
+    {
+      name: "fireEmp",
+      type: "input",
+      message: "Which employee would you like to remove?",
+    },
+  ])
+  .then(function (answer) {
+    connection.query("DELETE FROM employee WHERE ?", {
+    first_name: answer.fireEmp
+    });
+    let query = "SELECT * FROM employee";
+    let data = connection.query("SELECT * FROM employee");
+    connection.query(query, function (err, res) {
+      if (err) throw err;
+      console.log("Employee has been removed");
+      console.table(data, res);
+    });
+    viewEmployees();
+    init();
+  })
+}
+// allows user to remove department 
+function removeDepartment() {
+  inquirer.prompt ([
+    {
+      name: "removeDept",
+      type: "input",
+      message: "Which department would you like to remove?",
+    },
+  ])
+  .then(function (answer) {
+    connection.query("DELETE FROM department WHERE ?", {
+    first_name: answer.fireEmp
+    });
+    let query = "SELECT * FROM department";
+    let data = connection.query("SELECT * FROM department");
+    connection.query(query, function (err, res) {
+      if (err) throw err;
+      console.log("Department has been removed");
+      console.table(data, res);
+    });
+    viewAllDept();
+    init();
+  })
+}
