@@ -4,7 +4,7 @@
 
     
 ## Description: 
-Allows user to view and add existing employees
+Allows user to view and add existing employees and there assoicated departments. 
 
 ## Table of Contents:
 
