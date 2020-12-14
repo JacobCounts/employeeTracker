@@ -35,6 +35,8 @@ npm install
 ## Testing: 
 npm test
 
+![](images/Screen%20Shot%202020-12-14%20at%203.26.13%20PM.png)
+
 ## Questions? I can be contacted with the links below:   
 * email: infamous213@gmail.com
 * gitHub: [gitHub](https://github.com/JacobCounts)
